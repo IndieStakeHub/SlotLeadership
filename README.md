@@ -19,18 +19,18 @@ Usage
 
 Clone the repository:
 ```console
-git clone https://github.com/your-username/cardano-leadership-script.git
-cd cardano-leadership-script
+git clone https://github.com/IndieStakeHub/SlotLeadership.git
+cd SlotLeadership
 ```
 Make the script executable:
 ```console
-chmod +x leadership_schedule.sh
+chmod +x leaderSchedule.sh
 ```
 Edit the script (if needed) with your specific configurations.
 
 Run the script:
 ```console
-./leadership_schedule.sh
+./leaderSchedule.sh
 ```
 
 # Contributions
