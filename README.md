@@ -1,51 +1,38 @@
-# Tutorial: Using Cardano Leadership Schedule Script
+# Cardano Leadership Schedule Script
 
-# Step 1: Prerequisites
-Ensure that you have a running Cardano block producer node.
-Confirm that the necessary Cardano binaries, such as cardano-cli and jq, are installed and available in your system's PATH.
+# Overview
 
-# Step 2: Download the Script
-Open your preferred text editor.
-Copy and paste the provided script into the text editor.
+This script automates the process of querying the Cardano node for leadership schedule information for a specified stake pool. It checks whether the node is fully synced, determines the appropriate time to run the leadership query, and formats the result into a Grafana CSV file for analysis.
 
-# Step 3: Save the Script
-Save the script with a meaningful name, for example, leadership_schedule.sh.
+# Features
 
-# Step 4: Make the Script Executable
-Open a terminal window.
-Navigate to the directory where you saved the script.
+Automated leadership schedule query for a specified stake pool.
+Checks for node synchronization before running the query.
+Grafana CSV formatting for easy integration with monitoring tools.
+
+# Prerequisites
+
+A running Cardano block producer node.
+Installed Cardano binaries (cardano-cli, jq) in the system's PATH.
+Properly configured NODE_HOME directory and stake pool settings.
+Usage
+
+Clone the repository:
 ```console
-cd /path/to/script/directory
+git clone https://github.com/your-username/cardano-leadership-script.git
+cd cardano-leadership-script
 ```
-Make the script executable.
+Make the script executable:
 ```console
 chmod +x leadership_schedule.sh
 ```
+Edit the script (if needed) with your specific configurations.
 
-# Step 5: Edit the Script (Optional)
-Open the script in your text editor if you want to customize any parameters (e.g., change the NODE_HOME directory or adjust network settings).
-
-# Step 6: Run the Script
-Execute the script.
+Run the script:
 ```console
 ./leadership_schedule.sh
 ```
 
-# Step 7: Review the Output
-The script will display information about the current epoch, epoch start and end times, and the scheduled time for the leadership check.
-If the script detects that it's too early to run or if the check has already been performed, appropriate messages will be displayed.
-If the script proceeds with the leadership check, it will query Cardano for the leadership schedule, format the result into a Grafana CSV file, and display the result.
+# Contributions
 
-# Step 8: Troubleshooting
-If you encounter issues, ensure that the necessary Cardano binaries (cardano-cli and jq) are in your PATH.
-Check for any error messages displayed by the script.
-
-# Step 9: Script Completion
-Once the script has completed, it will display a message indicating the end of the script execution.
-
-Note:
-It's crucial to have accurate file paths and permissions for your Cardano node configuration files.
-Ensure that the Cardano node is fully synced before running the script.
-Regularly check for updates to the script based on any changes in Cardano node configurations.
-
-That concludes the tutorial for using the Cardano Leadership Schedule script.
+Contributions are welcome! Feel free to submit issues or pull requests.
